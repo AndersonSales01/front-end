@@ -25695,3 +25695,71 @@ ion-navbar.toolbar {
   padding-bottom: 4px;
   min-height: 46px;
 }
+
+page-login label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 28px;
+  color: #7179ee;
+}
+
+page-login .email {
+  margin-top: 40px !important;
+}
+
+page-login input[type=text] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 4px;
+}
+
+page-login .button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 48px;
+}
+
+page-login .button-new {
+  margin-top: 20px;
+}
+
+page-login .scroll-content {
+  background-color: #F5F5F5;
+  padding: 36px !important;
+}
+
+page-login .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  color: #7179ee;
+  margin-right: 20px;
+}
+
+page-login .reset-password {
+  margin-left: 80px;
+  margin-top: 10px;
+}

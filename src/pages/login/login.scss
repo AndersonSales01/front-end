@@ -1,0 +1,50 @@
+page-login {
+    label {
+        display: flex;
+        text-align: center;
+        font-size: 18px;
+        justify-content: start;
+        margin-left: 28px;
+        color: #7179ee;
+        
+    }
+
+    .email {
+        margin-top: 40px !important;
+    }
+
+    input[type=text] {
+        width: 90%;
+        margin-left: 20px;
+        height: 38px;
+        border-radius: 4px;
+    }
+    .button{
+        background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+        width: 90%;
+        display: flex;
+        margin-left: 20px;
+        border-radius: 20px;
+        margin-top: 48px;
+    }
+    .button-new {
+        margin-top: 20px;
+    }
+    .scroll-content {
+        background-color: #F5F5F5;
+        padding: 36px !important;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 40px;
+        color: #7179ee;
+        margin-right: 20px;
+        }
+        .reset-password {
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+   
+}
