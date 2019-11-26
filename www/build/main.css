@@ -25696,6 +25696,103 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+page-forgot-password label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 28px;
+  color: #F5F5F5;
+}
+
+page-forgot-password .reset-password {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 12px;
+  color: #F5F5F5;
+}
+
+page-forgot-password .email {
+  margin-top: 40px !important;
+}
+
+page-forgot-password input[type=text] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 12px;
+  margin-top: 34px;
+}
+
+page-forgot-password .confirm-button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1));
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 36px;
+  border: 1px solid rebeccapurple;
+}
+
+page-forgot-password .banner {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-forgot-password .toolbar-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #F5F5F5;
+  margin-right: 40px;
+  overflow: visible;
+  margin-left: 10px;
+}
+
+page-forgot-password .toolbar-background {
+  background-color: transparent !important;
+}
+
+page-forgot-password .back-button {
+  color: #F5F5F5 !important;
+  background-color: transparent;
+}
+
+page-forgot-password ::-webkit-input-placeholder {
+  margin-left: 40px !important;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  width: 150px;
+}
+
 page-login label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -25826,8 +25923,7 @@ page-new-user input[type=text] {
   margin-left: 20px;
   height: 38px;
   border-radius: 12px;
-  margin-top: 38px;
-  margin-bottom: 4px;
+  margin-top: 34px;
 }
 
 page-new-user .salve-button {
@@ -25861,7 +25957,7 @@ page-new-user .toolbar-title {
   text-align: center;
   font-size: 18px;
   color: #F5F5F5;
-  margin-right: 40px;
+  margin-left: 14px;
   overflow: visible;
 }
 

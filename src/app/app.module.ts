@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { NewUserPage } from '../pages/new-user/new-user';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { NewUserPage } from '../pages/new-user/new-user';
     HomePage,
     ListPage,
     LoginPage,
-    NewUserPage
+    NewUserPage, 
+    ForgotPasswordPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +33,15 @@ import { NewUserPage } from '../pages/new-user/new-user';
     HomePage,
     ListPage,
     LoginPage,
-    NewUserPage
+    NewUserPage,
+    ForgotPasswordPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpClientModule,
+  
   ]
 })
 export class AppModule {}

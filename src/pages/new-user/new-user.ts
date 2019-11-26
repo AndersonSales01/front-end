@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
-/**
- * Generated class for the NewUserPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,11 +11,44 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewUserPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  url = 'http://localhost:3000';
+  name: string;
+  email: any;
+  password: any;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient,
+     private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewUserPage');
   }
 
+  newUser(name, email, password){
+    const objUser = {
+      name,
+      email,
+      password
+    };
+  
+     this.http.post(`${this.url}/auth/register`, objUser).subscribe(res => {
+      try {
+        this.presentAlert();
+        this.navCtrl.pop();
+      } catch (err) {
+        alert("ERRO AO SALVAR");
+      }
+    console.log(res)
+     });
+    }
+    presentAlert() {
+      let alert = this.alertCtrl.create({
+        title: 'Novo Usuário',
+        subTitle: 'Usuário criado com sucesso!',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+      
 }

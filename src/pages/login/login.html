@@ -2,13 +2,13 @@
  <img src="assets/imgs/logo-oi.png">
 
   <div>
-    <input type="text" name="fname" placeholder="Email">
+    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email">
   </div>
   <div>
-    <input type="password" name="fname" placeholder="Senha">
-    <label class="reset-password">Esqueceu a senha?</label>
+    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha">
+    <label class="reset-password" (click)="openResetPassword()">Esqueceu a senha?</label>
   </div>
-  <button ion-button class="login-button" (click)="openPage()">LOGAR</button>
+  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR</button>
   <p>
     <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>
 
