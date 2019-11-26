@@ -25695,3 +25695,191 @@ ion-navbar.toolbar {
   padding-bottom: 4px;
   min-height: 46px;
 }
+
+page-login label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 28px;
+  color: #F5F5F5;
+}
+
+page-login .email {
+  margin-top: 40px !important;
+}
+
+page-login input[type=text] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 12px;
+  margin-top: 50px;
+  margin-bottom: 26px;
+}
+
+page-login input[type=password] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+page-login .login-button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1));
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 36px;
+  border: 1px solid rebeccapurple;
+}
+
+page-login .new-user-button {
+  margin-top: 20px;
+  background-color: transparent !important;
+  color: #F5F5F5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 86px;
+  margin-top: 24px;
+  box-shadow: transparent !important;
+  -webkit-box-shadow: 0px !important;
+}
+
+page-login .scroll-content {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-login .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  color: #F5F5F5;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-top: 30px;
+}
+
+page-login .reset-password {
+  margin-left: 124px;
+  margin-top: 16px;
+}
+
+page-login ::-webkit-input-placeholder {
+  margin-left: 40px !important;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  width: 150px;
+}
+
+page-login img {
+  max-width: 50%;
+  margin-left: 72px;
+  margin-top: 14px;
+}
+
+page-new-user label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 28px;
+  color: #F5F5F5;
+}
+
+page-new-user .email {
+  margin-top: 40px !important;
+}
+
+page-new-user input[type=text] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 12px;
+  margin-top: 38px;
+  margin-bottom: 4px;
+}
+
+page-new-user .salve-button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1));
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 36px;
+  border: 1px solid rebeccapurple;
+}
+
+page-new-user .banner {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-new-user .toolbar-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #F5F5F5;
+  margin-right: 40px;
+  overflow: visible;
+}
+
+page-new-user .toolbar-background {
+  background-color: transparent !important;
+}
+
+page-new-user .back-button {
+  color: #F5F5F5 !important;
+  background-color: transparent;
+}
+
+page-new-user ::-webkit-input-placeholder {
+  margin-left: 40px !important;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  width: 150px;
+}
