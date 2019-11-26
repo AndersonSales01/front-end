@@ -79,15 +79,16 @@ var LoginPage = /** @class */ (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__new_user_new_user__["a" /* NewUserPage */]);
     };
     LoginPage.prototype.openPage = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__register_project_register_project__["a" /* RegisterProjectPage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__register_project_register_project__["a" /* RegisterProjectPage */]);
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/login/login.html"*/'<ion-content padding>\n <img src="assets/imgs/logo-oi.png">\n\n  <div>\n    <input type="text" name="fname" placeholder="Email">\n  </div>\n  <div>\n    <input type="password" name="fname" placeholder="Senha">\n    <label class="reset-password">Esqueceu a senha?</label>\n  </div>\n  <button ion-button class="login-button" (click)="openPage()">LOGAR</button>\n  <p>\n    <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>\n\n\n</ion-content>'/*ion-inline-end:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -169,11 +170,11 @@ var map = {
 		2
 	],
 	"../pages/new-user/new-user.module": [
-		276,
+		275,
 		1
 	],
 	"../pages/register-project/register-project.module": [
-		275,
+		276,
 		0
 	]
 };
@@ -297,8 +298,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/list-projects/list-projects.module#ListProjectsPageModule', name: 'ListProjectsPage', segment: 'list-projects', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/new-user/new-user.module#NewUserPageModule', name: 'NewUserPage', segment: 'new-user', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/new-user/new-user.module#NewUserPageModule', name: 'NewUserPage', segment: 'new-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
