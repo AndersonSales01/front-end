@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewUserPage } from '../new-user/new-user';
 import { HomePage } from '../home/home';
+import { RegisterProjectPage } from '../register-project/register-project';
 
 @IonicPage()
 @Component({
@@ -20,7 +21,7 @@ export class LoginPage {
     this.navCtrl.push(NewUserPage);
   }
   openPage(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(RegisterProjectPage);
   }
 
 }
