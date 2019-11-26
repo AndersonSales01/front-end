@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 272:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListProjectsPageModule", function() { return ListProjectsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewUserPageModule", function() { return NewUserPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_projects__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_user__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ListProjectsPageModule = /** @class */ (function () {
-    function ListProjectsPageModule() {
+var NewUserPageModule = /** @class */ (function () {
+    function NewUserPageModule() {
     }
-    ListProjectsPageModule = __decorate([
+    NewUserPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__list_projects__["a" /* ListProjectsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__new_user__["a" /* NewUserPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list_projects__["a" /* ListProjectsPage */]),
-            ],
-            schemas: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new_user__["a" /* NewUserPage */]),
             ],
         })
-    ], ListProjectsPageModule);
-    return ListProjectsPageModule;
+    ], NewUserPageModule);
+    return NewUserPageModule;
 }());
 
-//# sourceMappingURL=list-projects.module.js.map
+//# sourceMappingURL=new-user.module.js.map
 
 /***/ })
 

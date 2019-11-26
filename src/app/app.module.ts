@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterProjectPage } from '../pages/register-project/register-project';
 import { ListProjectsPage } from '../pages/list-projects/list-projects';
+import { LoginPage } from '../pages/login/login';
+import { NewUserPage } from '../pages/new-user/new-user';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ListProjectsPage } from '../pages/list-projects/list-projects';
     ListPage,
     RegisterProjectPage,
     ListProjectsPage,
+    LoginPage,
+    NewUserPage
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { ListProjectsPage } from '../pages/list-projects/list-projects';
     ListPage,
     RegisterProjectPage,
     ListProjectsPage,
+    LoginPage,
+    NewUserPage
   ],
   providers: [
     StatusBar,
