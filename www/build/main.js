@@ -4,7 +4,7 @@ webpackJsonp([2],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterProjectPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListProjectsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -19,29 +19,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the RegisterProjectPage page.
+ * Generated class for the ListProjectsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var RegisterProjectPage = /** @class */ (function () {
-    function RegisterProjectPage(navCtrl, navParams) {
+var ListProjectsPage = /** @class */ (function () {
+    function ListProjectsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    RegisterProjectPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad RegisterProjectPage');
+    ListProjectsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ListProjectsPage');
     };
-    RegisterProjectPage = __decorate([
+    ListProjectsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-register-project',template:/*ion-inline-start:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/register-project/register-project.html"*/'<!--\n  Generated template for the RegisterProjectPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n        <button class= "iconMenu" ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Cadastrar Projeto</ion-title>\n      </ion-navbar>\n</ion-header>\n\n<ion-content class="content-form" padding>\n    \n<ion-label class="label-form" position="floating" >Titulo: </ion-label>\n<input class="input-form" type="text" name="fname">\n<ion-label class="label-form" >Descrição: </ion-label>\n<input class="input-form" type="text" name="fname">\n\n<ion-label class="label-form" >Atividades: </ion-label>\n<div class="select-task"> \n<ion-item class="task-form">\n    <!-- <ion-label class="labelForm" >Atividades</ion-label> -->\n    <ion-select placeholder="Selecione as atividades" [(ngModel)]="toppings" multiple="true" >\n      <ion-option class="options-form">DESCARREGADO</ion-option>\n      <ion-option class="options-form">COM DEFEITO</ion-option>\n      </ion-select>\n  </ion-item>\n\n \n\n</div>\n\n<button class="buttonSave" ion-button >Cadastrar</button>\n</ion-content>\n'/*ion-inline-end:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/register-project/register-project.html"*/,
+            selector: 'page-list-projects',template:/*ion-inline-start:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/list-projects/list-projects.html"*/'<!--\n  Generated template for the ListProjectsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n      <button class= "iconMenu" ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n    <ion-title>Lista de Projetos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="content-page" padding>\n    <ion-card class="card-proj">\n        <ion-card-header>\n            <!-- <ion-img  class= "img-taks" src="assets/imgs/clipboard.png"></ion-img> -->\n          <ion-card-title class="text-card">Titulo do projeto</ion-card-title>\n          \n         \n        </ion-card-header>\n      \n        <ion-card-content>\n          <p class="description-card">Descrição  do projeto</p>\n        </ion-card-content>\n\n    \n      </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/list-projects/list-projects.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], RegisterProjectPage);
-    return RegisterProjectPage;
+    ], ListProjectsPage);
+    return ListProjectsPage;
 }());
 
-//# sourceMappingURL=register-project.js.map
+//# sourceMappingURL=list-projects.js.map
 
 /***/ }),
 
@@ -67,11 +67,11 @@ webpackEmptyAsyncContext.id = 110;
 
 var map = {
 	"../pages/list-projects/list-projects.module": [
-		271,
+		272,
 		1
 	],
 	"../pages/register-project/register-project.module": [
-		272,
+		271,
 		0
 	]
 };
@@ -153,8 +153,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_project_register_project__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_list_projects_list_projects__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_register_project_register_project__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_list_projects_list_projects__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -187,8 +187,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/list-projects/list-projects.module#ListProjectsPageModule', name: 'ListProjectsPage', segment: 'list-projects', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-projects/list-projects.module#ListProjectsPageModule', name: 'ListProjectsPage', segment: 'list-projects', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -227,8 +227,8 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_register_project_register_project__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_projects_list_projects__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_register_project_register_project__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_projects_list_projects__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -350,7 +350,7 @@ var ListPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListProjectsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterProjectPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -365,29 +365,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the ListProjectsPage page.
+ * Generated class for the RegisterProjectPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ListProjectsPage = /** @class */ (function () {
-    function ListProjectsPage(navCtrl, navParams) {
+var RegisterProjectPage = /** @class */ (function () {
+    function RegisterProjectPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ListProjectsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ListProjectsPage');
+    RegisterProjectPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad RegisterProjectPage');
     };
-    ListProjectsPage = __decorate([
+    RegisterProjectPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-list-projects',template:/*ion-inline-start:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/list-projects/list-projects.html"*/'<!--\n  Generated template for the ListProjectsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n      <button class= "iconMenu" ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n    <ion-title>Lista de Projetos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="content-page" padding>\n    <ion-card class="card-proj">\n        <ion-card-header>\n            <!-- <ion-img  class= "img-taks" src="assets/imgs/clipboard.png"></ion-img> -->\n          <ion-card-title class="text-card">Titulo do projeto</ion-card-title>\n          \n         \n        </ion-card-header>\n      \n        <ion-card-content>\n          <p class="description-card">Descrição  do projeto</p>\n        </ion-card-content>\n\n    \n      </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/list-projects/list-projects.html"*/,
+            selector: 'page-register-project',template:/*ion-inline-start:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/register-project/register-project.html"*/'<!--\n  Generated template for the RegisterProjectPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n        <button class= "iconMenu" ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Cadastrar Projeto</ion-title>\n      </ion-navbar>\n</ion-header>\n\n<ion-content class="content-form" padding>\n    \n<ion-label class="label-form" position="floating" >Titulo: </ion-label>\n<input class="input-form" type="text" name="fname">\n<ion-label class="label-form" >Descrição: </ion-label>\n<input class="input-form" type="text" name="fname">\n\n<ion-label class="label-form" >Atividades: </ion-label>\n<div class="select-task"> \n<ion-item class="task-form">\n    <!-- <ion-label class="labelForm" >Atividades</ion-label> -->\n    <ion-select placeholder="Selecione as atividades" [(ngModel)]="toppings" multiple="true" >\n      <ion-option class="options-form">DESCARREGADO</ion-option>\n      <ion-option class="options-form">COM DEFEITO</ion-option>\n      </ion-select>\n  </ion-item>\n\n \n\n</div>\n\n<button class="buttonSave" ion-button >Cadastrar</button>\n</ion-content>\n'/*ion-inline-end:"/Users/anderson.c.sales/Desktop/tcc/front-end/src/pages/register-project/register-project.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ListProjectsPage);
-    return ListProjectsPage;
+    ], RegisterProjectPage);
+    return RegisterProjectPage;
 }());
 
-//# sourceMappingURL=list-projects.js.map
+//# sourceMappingURL=register-project.js.map
 
 /***/ })
 
