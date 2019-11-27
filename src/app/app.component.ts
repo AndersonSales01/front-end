@@ -44,4 +44,7 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+  logoutPage(){
+    this.nav.setRoot(LoginPage);
+  }
 }

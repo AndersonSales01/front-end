@@ -25771,11 +25771,11 @@ button.item-ios:not([detail-none]) {
   background-color: transparent !important;
 }
 
-img {
+.avatar {
   border-radius: 117px;
   width: 30%;
   margin-left: 42px;
-  margin-top: 68px;
+  margin-top: 38px;
   margin-bottom: 38px;
   display: initial;
 }
@@ -25783,6 +25783,16 @@ img {
 .exit-icon {
   font-size: 40px;
   color: #F5F5F5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 190px;
+  margin-right: 12px;
 }
 
 page-forgot-password label {
