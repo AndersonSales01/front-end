@@ -25793,6 +25793,67 @@ page-forgot-password ::-webkit-input-placeholder {
   width: 150px;
 }
 
+page-list-projects .content-page {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-list-projects .card-proj {
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+page-list-projects .toolbar-background {
+  background-color: transparent !important;
+}
+
+page-list-projects .toolbar-title {
+  font-size: 18px;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #F5F5F5;
+  margin-right: 20px;
+}
+
+page-list-projects .text-card {
+  color: #7179ee;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.8rem !important;
+}
+
+page-list-projects .iconMenu {
+  color: #F5F5F5 !important;
+}
+
+page-list-projects .description-card {
+  color: #7179ee;
+  font-size: 1.6rem !important;
+  padding-right: 21px !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 page-login label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -25978,4 +26039,99 @@ page-new-user ::-webkit-input-placeholder {
   display: flex;
   padding: 5px;
   width: 150px;
+}
+
+page-register-project .input-form {
+  border: 1px solid #DCDCDC;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border-radius: 1rem;
+  opacity: 0.8;
+}
+
+page-register-project .label-form {
+  font-size: 16px !important;
+  font-family: Verdana !important;
+  color: #F5F5F5;
+  position: relative !important;
+}
+
+page-register-project .content-form {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-register-project .toolbar-title {
+  font-size: 18px;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #F5F5F5;
+  margin-right: 20px;
+}
+
+page-register-project .toolbar-background {
+  background-color: transparent !important;
+}
+
+page-register-project .task-form {
+  border-radius: 1rem !important;
+  border: 1px solid #DCDCDC !important;
+}
+
+page-register-project .buttonSave {
+  margin-top: 50px;
+  width: 85%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 19px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1));
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+  border: 1px solid rebeccapurple;
+  border-radius: 20px;
+}
+
+page-register-project .bar-button-default, page-register-project .bar-button-default.bar-button-default, page-register-project .bar-button-clear-default {
+  color: #F5F5F5;
+  background-color: transparent;
+}
+
+page-register-project .iconMenu {
+  color: #F5F5F5 !important;
+}
+
+page-register-project ion-select {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  max-width: 100%;
+}
+
+page-register-project .options-form {
+  font-size: 16px;
+}
+
+page-register-project .item-ios, page-register-project .item-md {
+  font-size: 14px;
+  color: #7179ee;
+  background-color: #fff;
+}
+
+page-register-project .select-ios .select-icon {
+  width: 12px;
+  height: 18px;
+  position: fixed;
+  margin-left: 215px !important;
 }

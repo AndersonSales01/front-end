@@ -4,6 +4,9 @@ import { NewUserPage } from '../new-user/new-user';
 import { HomePage } from '../home/home';
 import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 import { HttpClient } from '@angular/common/http';
+import { RegisterProjectPage } from '../register-project/register-project';
+import { ListProjectsPage } from '../list-projects/list-projects';
+
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -36,12 +39,14 @@ openLogin(email, password){
 
    this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
     try {
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(ListProjectsPage);
     } catch (err) {
       return alert("SENHA INCORRETA");
       }
    });
   }
- 
+  openPage(){
+    this.navCtrl.push(RegisterProjectPage);
+  }
 
 }
