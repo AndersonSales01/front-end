@@ -140,10 +140,10 @@ var LoginPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\login\login.html"*/'<ion-content padding>\n\n <img src="assets/imgs/logo-oi.png">\n\n\n\n  <div>\n\n    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email">\n\n  </div>\n\n  <div>\n\n    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha">\n\n    <label class="reset-password" (click)="openResetPassword()">Esqueceu a senha?</label>\n\n  </div>\n\n  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR</button>\n\n  <p>\n\n    <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\login\login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]])
     ], LoginPage);
     return LoginPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -676,10 +676,9 @@ var ListProjectsPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-list-projects',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/'\n\n<ion-header>\n\n  <ion-navbar>\n\n      <button class= "iconMenu" ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n    <ion-title>Lista de Projetos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="content-page" padding>\n\n    <ion-card class="card-proj">\n\n        <ion-card-header>\n\n            <!-- <ion-img  class= "img-taks" src="assets/imgs/clipboard.png"></ion-img> -->\n\n          <ion-card-title class="text-card">Titulo do projeto</ion-card-title>\n\n          \n\n         \n\n        </ion-card-header>\n\n      \n\n        <ion-card-content>\n\n          <p class="description-card">Descrição  do projeto</p>\n\n        </ion-card-content>\n\n\n\n    \n\n      </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ListProjectsPage);
     return ListProjectsPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=list-projects.js.map
