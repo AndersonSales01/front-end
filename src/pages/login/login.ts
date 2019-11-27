@@ -39,10 +39,12 @@ openLogin(email, password){
 
    this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
     try {
+      alert("ok");
       this.navCtrl.setRoot(ListProjectsPage);
     } catch (err) {
       return alert("SENHA INCORRETA");
       }
+      console.log(res)
    });
   }
   openPage(){

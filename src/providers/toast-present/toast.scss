@@ -1,0 +1,36 @@
+.toast-custom {
+
+    .toast-wrapper {
+        background-color: #7179ee;
+        background-size: 14px;
+        border-radius: 8px;
+        border: 1px solid rebeccapurple;
+    }
+   
+    .toast-button {
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        border: none;
+        margin: 0 16px;
+        padding: 0px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+        top: 16px;
+        color: transparent;
+        width: 16px;
+      }
+
+
+    .toast-message {
+        color: #FFFFFF;
+        text-align: left;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        padding: 16px 40px;
+        width: 100%;
+        margin: 0;
+    }
+
+}

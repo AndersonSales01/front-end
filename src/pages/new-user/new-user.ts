@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { ToastController } from 'ionic-angular';
+import { ToastPresentProvider } from '../../providers/toast-present/toast-present';
 
 
 
@@ -18,7 +20,7 @@ export class NewUserPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient,
-     private alertCtrl: AlertController) {
+     private toastprovider: ToastPresentProvider) {
   }
 
   ionViewDidLoad() {
@@ -34,7 +36,7 @@ export class NewUserPage {
   
      this.http.post(`${this.url}/auth/register`, objUser).subscribe(res => {
       try {
-        this.presentAlert();
+        this.toastprovider.presentToast('Usuário criado com sucesso!');
         this.navCtrl.pop();
       } catch (err) {
         alert("ERRO AO SALVAR");
@@ -42,13 +44,6 @@ export class NewUserPage {
     console.log(res)
      });
     }
-    presentAlert() {
-      let alert = this.alertCtrl.create({
-        title: 'Novo Usuário',
-        subTitle: 'Usuário criado com sucesso!',
-        buttons: ['OK']
-      });
-      alert.present();
-    }
-      
+  
+  
 }

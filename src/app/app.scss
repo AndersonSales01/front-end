@@ -1,16 +1,86 @@
-// http://ionicframework.com/docs/theming/
+.menu {
+    // background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+
+    .input-wrapper {
+        color: #F5F5F5;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0.25px;
+        line-height: 41px;
+        white-space: normal !important;
+        margin-left: 20px;
+
+        // background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
 
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+        &:active,
+        &:hover {
+            color: #18c6e1 !important;
+
+        }
+    }
+
+    label {
+        color: #F5F5F5;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0.25px;
+        line-height: 41px;
+        white-space: normal !important;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -108px;
+        margin-bottom: 82px;
+        margin-right: 22px;
+
+    }
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+
+    .toolbar-background {
+        border-color: transparent;
+        background: transparent;
+    }
+
+    ion-header {
+        box-shadow: none !important;
+    }
+
+    .list {
+        margin: 20px 0 0;
+    }
+
+    .scroll-content {
+        background-image: linear-gradient(to right top, #f208fd, #18c6e1) !important;
+    }
+
+    .item {
+        background-image: linear-gradient(to right top, #f208fd, #18c6e1) !important;
+    }
+
+}
+
+.item-ios[detail-push] .item-inner,
+button.item-ios:not([detail-none]) {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+img {
+    border-radius: 117px;
+    width: 30%;
+    margin-left: 42px;
+    margin-top: 68px;
+    margin-bottom: 38px;
+    display: initial;
+}
+.exit-icon {
+    font-size: 40px;
+    color: #F5F5F5;
+}

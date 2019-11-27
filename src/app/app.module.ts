@@ -14,6 +14,8 @@ import { LoginPage } from '../pages/login/login';
 import { NewUserPage } from '../pages/new-user/new-user';
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingControllerProvider } from '../providers/loading-controller/loading-controller';
+import { ToastPresentProvider } from '../providers/toast-present/toast-present';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,12 @@ import { HttpClientModule } from '@angular/common/http';
     ListProjectsPage,
     LoginPage,
     NewUserPage, 
-    ForgotPasswordPage
-  ],
+    ForgotPasswordPage,
+    ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,12 +42,14 @@ import { HttpClientModule } from '@angular/common/http';
     ListProjectsPage,
     LoginPage,
     NewUserPage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoadingControllerProvider,
+    ToastPresentProvider
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
