@@ -6,13 +6,16 @@
 
 <ion-content class="banner" padding>
   <div>
-    <input type="text" name="fname" [(ngModel)]="name" placeholder="Nome">
+    <label>Nome</label>
+    <input type="text" name="fname" [(ngModel)]="name">
   </div>
   <div>
-    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email">
+    <label>Email</label>
+    <input type="text" name="fname" [(ngModel)]="email">
   </div>
   <div>
-    <input type="text" name="fname" [(ngModel)]="password" placeholder="Senha">
+    <label>Senha</label>
+    <input type="text" name="fname" [(ngModel)]="password">
   </div>
   <button ion-button class="salve-button" (click)="newUser(name, email, password)">SALVAR</button>
 

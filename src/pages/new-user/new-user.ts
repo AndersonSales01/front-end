@@ -20,30 +20,51 @@ export class NewUserPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient,
-     private toastprovider: ToastPresentProvider) {
+    private toastprovider: ToastPresentProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewUserPage');
   }
 
-  newUser(name, email, password){
+  newUser(name, email, password) {
     const objUser = {
       name,
       email,
       password
     };
-  
-     this.http.post(`${this.url}/auth/register`, objUser).subscribe(res => {
-      try {
-        this.toastprovider.presentToast('Usuário criado com sucesso!');
-        this.navCtrl.pop();
-      } catch (err) {
-        alert("ERRO AO SALVAR");
-      }
-    console.log(res)
-     });
+    if (this.validForm()) {
+      this.http.post(`${this.url}/auth/register`, objUser).subscribe(res => {
+        try {
+          this.toastprovider.presentToast('Usuário criado com sucesso!');
+          this.navCtrl.pop();
+        } catch (err) {
+        }
+        console.log(res)
+      }, err =>{
+        this.toastprovider.presentToast(err.error.error);
+        console.log(err.error.error)
+       });
     }
-  
-  
+
+  }
+  validForm() {
+
+    if (this.name == null || this.name == "") {
+      this.toastprovider.presentToast('Campo Nome obrigatório.');
+      return false;
+    }
+    if (this.email == null || this.email == "") {
+      this.toastprovider.presentToast('Campo Email obrigatório.');
+      return false;
+    }
+    if (this.password == null || this.password == "") {
+      this.toastprovider.presentToast('Campo Senha obrigatório.');
+      return false;
+    }
+    return true;
+
+  }
+
+
 }

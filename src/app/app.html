@@ -1,11 +1,11 @@
-<ion-menu [content]="content" type="overlay">
+<ion-menu id="myMenu" [content]="content" type="overlay">
 
   <ion-content class="menu">
     <ion-list no-lines>
       <ion-avatar item-start>
         <img class="avatar" src="assets/imgs/avatar.jpg">
       </ion-avatar>
-      <label>Ana Maria</label>
+      <label>{{ user }}</label>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon name="list-box"></ion-icon>
         {{p.title}}

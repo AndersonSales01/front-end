@@ -25727,7 +25727,7 @@ ion-navbar.toolbar {
   justify-content: flex-end;
   margin-top: -108px;
   margin-bottom: 82px;
-  margin-right: 22px;
+  margin-right: 34px;
 }
 
 .menu .container-footer {
@@ -26051,6 +26051,7 @@ page-login ::-webkit-input-placeholder {
   display: flex;
   padding: 5px;
   width: 150px;
+  position: floating;
 }
 
 page-login img {
@@ -26072,6 +26073,7 @@ page-new-user label {
   justify-content: start;
   margin-left: 28px;
   color: #F5F5F5;
+  margin-top: 20px;
 }
 
 page-new-user .email {
@@ -26083,7 +26085,7 @@ page-new-user input[type=text] {
   margin-left: 20px;
   height: 38px;
   border-radius: 12px;
-  margin-top: 34px;
+  margin-bottom: 2px;
 }
 
 page-new-user .salve-button {
@@ -26240,10 +26242,9 @@ page-register-project .select-ios .select-icon {
 }
 
 .toast-custom .toast-wrapper {
-  background-color: #7179ee;
+  background-color: #4c56e4;
   background-size: 14px;
   border-radius: 8px;
-  border: 1px solid rebeccapurple;
 }
 
 .toast-custom .toast-button {

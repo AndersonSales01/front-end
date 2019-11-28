@@ -1,14 +1,17 @@
 <ion-content padding>
  <img src="assets/imgs/logo-oi.png">
 
-  <div>
-    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email">
+ 
+ <div>
+    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email" required>
   </div>
   <div>
-    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha">
+    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha" required>
     <label class="reset-password" (click)="openResetPassword()">Esqueceu a senha?</label>
   </div>
-  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR</button>
+  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR
+    
+  </button>
   <p>
     <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>
 
