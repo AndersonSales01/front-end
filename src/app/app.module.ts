@@ -12,6 +12,8 @@ import { RegisterProjectPage } from '../pages/register-project/register-project'
 import { ListProjectsPage } from '../pages/list-projects/list-projects';
 import { LoginPage } from '../pages/login/login';
 import { NewUserPage } from '../pages/new-user/new-user';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceProvider } from '../providers/service/service';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { NewUserPage } from '../pages/new-user/new-user';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +43,8 @@ import { NewUserPage } from '../pages/new-user/new-user';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServiceProvider
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

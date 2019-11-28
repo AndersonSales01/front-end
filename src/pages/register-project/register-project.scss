@@ -4,9 +4,10 @@ page-register-project {
         border: 1px solid #DCDCDC;
         width: 100%;
         height: 40px;
-        padding: 5px;
+        padding: 10px;
         border-radius: 1rem;
         opacity: 0.8;
+        color: #7179ee !important;
 
     }
 
@@ -40,6 +41,7 @@ page-register-project {
     .task-form {
         border-radius: 1rem !important;
         border: 1px solid #DCDCDC !important;
+        opacity: 0.8;
     }
     .buttonSave {
         margin-top: 50px;
@@ -70,7 +72,6 @@ page-register-project {
     .options-form{
         font-size: 16px;
     }
-
     .item-ios, .item-md {
         
         font-size: 14px;
@@ -78,7 +79,6 @@ page-register-project {
         background-color: #fff;
         
     }
-
     .select-ios .select-icon {
        
         width: 12px;
@@ -86,4 +86,18 @@ page-register-project {
         position: fixed;
         margin-left: 215px !important;
     }
+    .description-form{
+        border: 1px solid #DCDCDC;
+        border-radius: 1rem;
+        width: 100%;
+        background-color: #F5F5F5;
+        height: 150px;
+        opacity: 0.8;
+        margin: 0 !important;
+        display: flex !important;
+        color: #7179ee !important;
+        font-size: 14px !important;
+        //height: 40px;
+    }
+   
 }

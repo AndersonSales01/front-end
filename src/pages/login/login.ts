@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewUserPage } from '../new-user/new-user';
 import { HomePage } from '../home/home';
 import { RegisterProjectPage } from '../register-project/register-project';
+import { ListProjectsPage } from '../list-projects/list-projects';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,7 @@ export class LoginPage {
     this.navCtrl.push(NewUserPage);
   }
   openPage(){
-    this.navCtrl.push(RegisterProjectPage);
+    this.navCtrl.setRoot(ListProjectsPage);
   }
 
 }

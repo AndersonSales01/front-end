@@ -5,34 +5,34 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
-        <button class= "iconMenu" ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Cadastrar Projeto</ion-title>
-      </ion-navbar>
+  <ion-navbar>
+    <button class="iconMenu" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ titleScreen }}</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content class="content-form" padding>
-    
-<ion-label class="label-form" position="floating" >Titulo: </ion-label>
-<input class="input-form" type="text" name="fname">
-<ion-label class="label-form" >Descrição: </ion-label>
-<input class="input-form" type="text" name="fname">
 
-<ion-label class="label-form" >Atividades: </ion-label>
-<div class="select-task"> 
-<ion-item class="task-form">
-    <!-- <ion-label class="labelForm" >Atividades</ion-label> -->
-    <ion-select placeholder="Selecione as atividades" [(ngModel)]="toppings" multiple="true" >
-      <ion-option class="options-form">DESCARREGADO</ion-option>
-      <ion-option class="options-form">COM DEFEITO</ion-option>
+  <ion-label class="label-form" >Titulo: </ion-label>
+  <input class="input-form" type="text" name="fname" [(ngModel)]="title" placeholder="Titulo" >
+  <ion-label class="label-form">Descrição: </ion-label>
+  <!-- <input type="text" name="fname" [(ngModel)]="description"> -->
+  
+    <ion-textarea  class="description-form" [(ngModel)]="description" placeholder="Descrição..."></ion-textarea>
+  
+
+  <ion-label class="label-form">Atividades: </ion-label>
+  <div class="select-task">
+    <ion-item class="task-form">
+      <!-- <ion-label class="labelForm" >Atividades</ion-label> -->
+      <ion-select placeholder="Selecione as atividades" [(ngModel)]="tasksSelected" multiple="true" >
+          <ion-option *ngFor=" let task of tasks" [value]="task" >{{task.title}}</ion-option>
       </ion-select>
-  </ion-item>
+    </ion-item>
 
- 
+  </div>
 
-</div>
-
-<button class="buttonSave" ion-button >Cadastrar</button>
+  <button class="buttonSave" (click)="actionButton(title,description)" ion-button> {{ buttonName }}</button>
 </ion-content>
