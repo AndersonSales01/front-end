@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service/service';
 import { Project } from '../../models/project';
 import { RegisterProjectPage } from '../register-project/register-project';
@@ -15,7 +15,8 @@ export class ListProjectsPage {
   // listProject: any[] = [];
   listProject: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public serviceProvider: ServiceProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public serviceProvider: ServiceProvider,public menuCtrl: MenuController) {
+    this.menuCtrl.enable(true, 'myMenu');
   }
 
   ionViewDidEnter() {
