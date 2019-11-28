@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { NewUserPage } from '../new-user/new-user';
 import { HomePage } from '../home/home';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { HttpClient } from '@angular/common/http';
 import { RegisterProjectPage } from '../register-project/register-project';
 import { ListProjectsPage } from '../list-projects/list-projects';
+import { ToastPresentProvider } from '../../providers/toast-present/toast-present';
 
 @IonicPage()
 @Component({
@@ -11,8 +14,14 @@ import { ListProjectsPage } from '../list-projects/list-projects';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  url = 'http://localhost:3000';
+  email: any;
+  password: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private http: HttpClient, private toastprovider: ToastPresentProvider, public menuCtrl: MenuController) {
+    this.menuCtrl.enable(false, 'myMenu');
+
   }
 
   ionViewDidLoad() {
@@ -20,9 +29,58 @@ export class LoginPage {
   }
   newUser() {
     this.navCtrl.push(NewUserPage);
+
+  }
+  openResetPassword() {
+    this.navCtrl.push(ForgotPasswordPage);
+  }
+  openLogin(email, password) {
+    const objUser = {
+      email,
+      password
+    };
+    if (this.validForm()) {
+      this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
+
+        try {
+          this.setName();
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('name', res.user.name);
+          localStorage.setItem('email', res.user.email);
+          this.navCtrl.setRoot(ListProjectsPage);
+        } catch (err) {
+        }
+        console.log(res)
+      }, err => {
+        this.toastprovider.presentToast(err.error.error);
+      });
+    }
+
   }
   openPage(){
     this.navCtrl.setRoot(ListProjectsPage);
+  }
+  validForm() {
+
+    if (this.email == null || this.email == "") {
+      this.toastprovider.presentToast('Campo Email obrigatório.');
+      return false;
+    }
+    if (this.password == null || this.password == "") {
+      this.toastprovider.presentToast('Campo Senha obrigatório.');
+      return false;
+    }
+    return true;
+
+  }
+  setName() {
+    this.user = localStorage.getItem('name');
+  }
+  keepLogin() {
+    if(localStorage == null || localStorage == undefined) {
+
+    } else {
+    }
   }
 
 }

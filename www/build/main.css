@@ -25696,6 +25696,202 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+.menu .input-wrapper {
+  color: #F5F5F5;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+  line-height: 41px;
+  white-space: normal !important;
+  margin-left: 20px;
+}
+
+.menu .input-wrapper:active, .menu .input-wrapper:hover {
+  color: #18c6e1 !important;
+}
+
+.menu label {
+  color: #F5F5F5;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+  line-height: 41px;
+  white-space: normal !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: -108px;
+  margin-bottom: 82px;
+  margin-right: 34px;
+}
+
+.menu .container-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.menu .toolbar-background {
+  border-color: transparent;
+  background: transparent;
+}
+
+.menu ion-header {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.menu .list {
+  margin: 20px 0 0;
+}
+
+.menu .scroll-content {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1)) !important;
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1) !important;
+}
+
+.menu .item {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1)) !important;
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1) !important;
+}
+
+.item-ios[detail-push] .item-inner,
+button.item-ios:not([detail-none]) {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+.avatar {
+  border-radius: 117px;
+  width: 30%;
+  margin-left: 42px;
+  margin-top: 38px;
+  margin-bottom: 38px;
+  display: initial;
+}
+
+.exit-icon {
+  font-size: 40px;
+  color: #F5F5F5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 190px;
+  margin-right: 12px;
+}
+
+page-forgot-password label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 28px;
+  color: #F5F5F5;
+}
+
+page-forgot-password .reset-password {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-left: 12px;
+  color: #F5F5F5;
+}
+
+page-forgot-password .email {
+  margin-top: 40px !important;
+}
+
+page-forgot-password input[type=text] {
+  width: 90%;
+  margin-left: 20px;
+  height: 38px;
+  border-radius: 12px;
+  margin-top: 34px;
+}
+
+page-forgot-password .confirm-button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#f208fd), to(#18c6e1));
+  background-image: linear-gradient(to right top, #f208fd, #18c6e1);
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-top: 36px;
+  border: 1px solid rebeccapurple;
+}
+
+page-forgot-password .banner {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
+  background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
+}
+
+page-forgot-password .toolbar-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #F5F5F5;
+  margin-right: 40px;
+  overflow: visible;
+  margin-left: 10px;
+}
+
+page-forgot-password .toolbar-background {
+  background-color: transparent !important;
+}
+
+page-forgot-password .back-button {
+  color: #F5F5F5 !important;
+  background-color: transparent;
+}
+
+page-forgot-password ::-webkit-input-placeholder {
+  margin-left: 40px !important;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+  width: 150px;
+}
+
 page-list-projects .content-page {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#18c6e1), color-stop(#7179ee), to(#f208fd));
   background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
@@ -25855,6 +26051,7 @@ page-login ::-webkit-input-placeholder {
   display: flex;
   padding: 5px;
   width: 150px;
+  position: floating;
 }
 
 page-login img {
@@ -25876,6 +26073,7 @@ page-new-user label {
   justify-content: start;
   margin-left: 28px;
   color: #F5F5F5;
+  margin-top: 20px;
 }
 
 page-new-user .email {
@@ -25887,8 +26085,7 @@ page-new-user input[type=text] {
   margin-left: 20px;
   height: 38px;
   border-radius: 12px;
-  margin-top: 38px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 page-new-user .salve-button {
@@ -25922,7 +26119,7 @@ page-new-user .toolbar-title {
   text-align: center;
   font-size: 18px;
   color: #F5F5F5;
-  margin-right: 40px;
+  margin-left: 14px;
   overflow: visible;
 }
 
@@ -25943,6 +26140,10 @@ page-new-user ::-webkit-input-placeholder {
   display: flex;
   padding: 5px;
   width: 150px;
+}
+
+page-new-user .toast-background {
+  background-color: red;
 }
 
 page-register-project .input-form {
@@ -26038,4 +26239,35 @@ page-register-project .select-ios .select-icon {
   height: 18px;
   position: fixed;
   margin-left: 215px !important;
+}
+
+.toast-custom .toast-wrapper {
+  background-color: #4c56e4;
+  background-size: 14px;
+  border-radius: 8px;
+}
+
+.toast-custom .toast-button {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  border: none;
+  margin: 0 16px;
+  padding: 0px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  color: transparent;
+  width: 16px;
+}
+
+.toast-custom .toast-message {
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 16px 40px;
+  width: 100%;
+  margin: 0;
 }

@@ -4,12 +4,6 @@ import { ServiceProvider } from '../../providers/service/service';
 import { Project } from '../../models/project';
 import { RegisterProjectPage } from '../register-project/register-project';
 
-/**
- * Generated class for the ListProjectsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

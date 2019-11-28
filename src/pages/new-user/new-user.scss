@@ -6,9 +6,8 @@ page-new-user {
         justify-content: start;
         margin-left: 28px;
         color: #F5F5F5;
-        
+        margin-top: 20px;
     }
-
     .email {
         margin-top: 40px !important;
     }
@@ -18,8 +17,7 @@ page-new-user {
         margin-left: 20px;
         height: 38px;
         border-radius: 12px;
-        margin-top: 38px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
     .salve-button{
         background-image: linear-gradient(to right top, #f208fd, #18c6e1);
@@ -40,7 +38,7 @@ page-new-user {
     text-align: center;
     font-size: 18px;
     color: #F5F5F5;
-    margin-right: 40px;
+    margin-left: 14px;
     overflow: visible;
    }
    .toolbar-background {
@@ -56,5 +54,8 @@ page-new-user {
     display: flex;
     padding: 5px;
     width: 150px;
+}
+.toast-background {
+    background-color: red;
 }
 }

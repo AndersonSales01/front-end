@@ -15,16 +15,17 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  user: string;
+
   rootPage: any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
       { title: 'Lista de projetos', component: ListProjectsPage },
       { title: 'Cadastrar Projeto', component: RegisterProjectPage }
     ];
@@ -37,7 +38,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.setName();
     });
+  }
+
+  setName() {
+    this.user = localStorage.getItem('name');
   }
 
   openPage(page) {
@@ -45,4 +51,10 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  logoutPage() {
+    this.nav.setRoot(LoginPage);
+    localStorage.clear()
+  }
+
 }
