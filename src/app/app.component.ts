@@ -17,11 +17,15 @@ export class MyApp {
 
   user: string;
 
-  rootPage: any = LoginPage;
+  rootPage: any = ListProjectsPage;
 
   pages: Array<{ title: string, component: any }>;
+  app: any;
+  userToken: string;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
+
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -38,12 +42,20 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.userToken = localStorage.getItem('token');
+
+      if (this.userToken == null) {
+        this.nav.setRoot(LoginPage);
+      } else {
+        this.nav.setRoot(ListProjectsPage);
+      }
       this.setName();
     });
   }
 
   setName() {
-    this.user = localStorage.getItem('name');
+    return localStorage.getItem('name');
   }
 
   openPage(page) {
@@ -56,5 +68,7 @@ export class MyApp {
     this.nav.setRoot(LoginPage);
     localStorage.clear()
   }
+
+
 
 }

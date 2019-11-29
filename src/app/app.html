@@ -5,7 +5,7 @@
       <ion-avatar item-start>
         <img class="avatar" src="assets/imgs/avatar.jpg">
       </ion-avatar>
-      <label>{{ user }}</label>
+      <label>{{ setName() }}</label>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon name="list-box"></ion-icon>
         {{p.title}}
@@ -16,4 +16,4 @@
 
 </ion-menu>
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" #content></ion-nav>

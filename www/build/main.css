@@ -25919,7 +25919,7 @@ page-list-projects .toolbar-title {
   -ms-flex-pack: center;
   justify-content: center;
   color: #F5F5F5;
-  margin-right: 20px;
+  margin-left: 8px;
 }
 
 page-list-projects .text-card {
@@ -25933,6 +25933,8 @@ page-list-projects .text-card {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.8rem !important;
+  white-space: normal !important;
+  margin-right: 54px;
 }
 
 page-list-projects .iconMenu {
@@ -25941,8 +25943,13 @@ page-list-projects .iconMenu {
 
 page-list-projects .description-card {
   color: #7179ee;
-  font-size: 1.6rem !important;
-  padding-right: 21px !important;
+  font-family: 'Graphik-Regular';
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  overflow: hidden;
+  height: 80px;
+  text-align: left !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -25951,6 +25958,26 @@ page-list-projects .description-card {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+page-list-projects .label-form {
+  font-size: 14px !important;
+  font-family: Verdana !important;
+  color: #7179ee;
+  position: relative !important;
+}
+
+page-list-projects .img-card {
+  width: 36px;
+  margin-left: 6px;
+}
+
+page-list-projects ion-content.has-refresher > .scroll-content {
+  background-color: transparent !important;
+}
+
+page-list-projects .scroll-content {
+  padding: 4px !important;
 }
 
 page-login label {
@@ -26150,9 +26177,10 @@ page-register-project .input-form {
   border: 1px solid #DCDCDC;
   width: 100%;
   height: 40px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 1rem;
   opacity: 0.8;
+  color: #7179ee !important;
 }
 
 page-register-project .label-form {
@@ -26190,6 +26218,7 @@ page-register-project .toolbar-background {
 page-register-project .task-form {
   border-radius: 1rem !important;
   border: 1px solid #DCDCDC !important;
+  opacity: 0.8;
 }
 
 page-register-project .buttonSave {
@@ -26239,6 +26268,22 @@ page-register-project .select-ios .select-icon {
   height: 18px;
   position: fixed;
   margin-left: 215px !important;
+}
+
+page-register-project .description-form {
+  border: 1px solid #DCDCDC;
+  border-radius: 1rem;
+  width: 100%;
+  background-color: #F5F5F5;
+  height: 150px;
+  opacity: 0.8;
+  margin: 0 !important;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  color: #7179ee !important;
+  font-size: 14px !important;
 }
 
 .toast-custom .toast-wrapper {

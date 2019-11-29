@@ -17,17 +17,18 @@ export class ServiceProvider {
   }
 
   registerProject (project) : Observable<any> {
-   return this.http.post(`${apiConfig.BASE_URL}/projects`, project, { headers: header,observe: 'response' });
+   return this.http.post(`${apiConfig.BASE_URL}/projects`, project, { headers: header, observe: 'response' });
   }
 
   getListProjects() : Observable<any>{
-    return this.http.get(`${apiConfig.BASE_URL}/projects`,  { headers: header,observe: 'response' });
+    return this.http.get(`${apiConfig.BASE_URL}/projects`,  { headers: header, observe: 'response' });
+    
   }
 
   editProject(project){
     //Retira o atributo id do objeto.
     let { id, ...projectData } = project;
-    return this.http.put(`${apiConfig.BASE_URL}/projects/${id}`, projectData, { headers: header,observe: 'response' });
+    return this.http.put(`${apiConfig.BASE_URL}/projects/${id}`, projectData, { headers: header, observe: 'response' });
   }
 
 }

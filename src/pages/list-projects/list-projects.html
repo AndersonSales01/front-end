@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <button class="iconMenu" ion-button menuToggle>
@@ -9,21 +8,21 @@
 </ion-header>
 
 <ion-content class="content-page" padding>
-  <ion-list>
-    <ion-card (click)="editProject(item)" class="card-proj" *ngFor="let item of listProject">
-      <ion-card-header>
-        <ion-row>
-          <ion-col col-3>
-            <img class="img-card" src="assets/imgs/clipboard.png" />
-          </ion-col>
-          <ion-col col-9>
-            <ion-card-title class="text-card">{{ item.title }}</ion-card-title>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-      <ion-card-content>
-        <p class="description-card">{{ item.description }}</p>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-</ion-content>
+      <ion-list>
+        <ion-card (click)="editProject(item)" class="card-proj" *ngFor="let item of listProject">
+          <ion-card-header>
+            <ion-row>
+              <ion-col col-3>
+                <img class="img-card" src="assets/imgs/clipboard.png" />
+              </ion-col>
+              <ion-col col-9>
+                <ion-card-title class="text-card">{{ item.title }}</ion-card-title>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="description-card">{{ item.description }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+  </ion-content>

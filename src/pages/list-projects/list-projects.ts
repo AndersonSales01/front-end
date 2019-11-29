@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import { ServiceProvider } from '../../providers/service/service';
 import { Project } from '../../models/project';
 import { RegisterProjectPage } from '../register-project/register-project';
+import { ToastPresentProvider } from '../../providers/toast-present/toast-present';
 
 
 @IonicPage()
@@ -15,7 +16,8 @@ export class ListProjectsPage {
   // listProject: any[] = [];
   listProject: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public serviceProvider: ServiceProvider,public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public serviceProvider: ServiceProvider,public menuCtrl: MenuController, private toastprovider: ToastPresentProvider) {
     this.menuCtrl.enable(true, 'myMenu');
   }
 
@@ -28,11 +30,11 @@ export class ListProjectsPage {
     this.serviceProvider.getListProjects().subscribe(res => {
 
       this.listProject = res.body.projects;
-      // localStorage.setItem('token', JSON.stringify(this.listProject));
+      // localStorage.setItem('token',  res.token(this.listProject));
       console.log("list", this.listProject);
     }, err => {
       console.log("Error", err.status);
-      console.log("msg error", err.error);
+      this.toastprovider.presentToast(err.error.error);
     });
   }
   editProject(project) {
@@ -40,6 +42,13 @@ export class ListProjectsPage {
       obj: project
     });
     console.log("projectSelected", project);
+  }
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+    setTimeout(() => {
+      refresher.complete();
+    }, 2000);
   }
 
 }

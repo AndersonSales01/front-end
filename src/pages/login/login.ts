@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { RegisterProjectPage } from '../register-project/register-project';
 import { ListProjectsPage } from '../list-projects/list-projects';
 import { ToastPresentProvider } from '../../providers/toast-present/toast-present';
+import { LoadingControllerProvider } from '../../providers/loading-controller/loading-controller';
 
 @IonicPage()
 @Component({
@@ -17,11 +18,12 @@ export class LoginPage {
   url = 'http://localhost:3000';
   email: any;
   password: any;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private http: HttpClient, private toastprovider: ToastPresentProvider, public menuCtrl: MenuController) {
+    private http: HttpClient, private toastprovider: ToastPresentProvider,
+     public menuCtrl: MenuController, public loadingcontroller: LoadingControllerProvider) {
     this.menuCtrl.enable(false, 'myMenu');
-
   }
 
   ionViewDidLoad() {
@@ -34,21 +36,22 @@ export class LoginPage {
   openResetPassword() {
     this.navCtrl.push(ForgotPasswordPage);
   }
-  openLogin(email, password) {
+ async openLogin(email, password) {
     const objUser = {
       email,
       password
     };
     if (this.validForm()) {
-      this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
+     await this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
 
         try {
           this.setName();
-          localStorage.setItem('token', res.token);
+          this.navCtrl.setRoot(ListProjectsPage);
+    
           localStorage.setItem('name', res.user.name);
           localStorage.setItem('email', res.user.email);
-          this.navCtrl.setRoot(ListProjectsPage);
-        } catch (err) {
+          localStorage.setItem('token', res.token);
+          } catch (err) {
         }
         console.log(res)
       }, err => {
@@ -76,11 +79,6 @@ export class LoginPage {
   setName() {
     this.user = localStorage.getItem('name');
   }
-  keepLogin() {
-    if(localStorage == null || localStorage == undefined) {
-
-    } else {
-    }
-  }
+ 
 
 }
