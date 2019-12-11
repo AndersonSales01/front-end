@@ -197,15 +197,15 @@ var map = {
 		3
 	],
 	"../pages/login/login.module": [
-		288,
+		286,
 		2
 	],
 	"../pages/new-user/new-user.module": [
-		286,
+		287,
 		1
 	],
 	"../pages/register-project/register-project.module": [
-		287,
+		288,
 		0
 	]
 };
@@ -305,9 +305,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-projects/list-projects.module#ListProjectsPageModule', name: 'ListProjectsPage', segment: 'list-projects', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-user/new-user.module#NewUserPageModule', name: 'NewUserPage', segment: 'new-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
@@ -1016,10 +1016,10 @@ var RegisterProjectPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'page-register-project',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\register-project\register-project.html"*/'<!--\n\n  Generated template for the RegisterProjectPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button class="iconMenu" ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>{{ titleScreen }}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="content-form" padding>\n\n\n\n  <ion-label class="label-form" >Titulo: </ion-label>\n\n  <input class="input-form" type="text" name="fname" [(ngModel)]="title" placeholder="Titulo" >\n\n  <ion-label class="label-form">Descrição: </ion-label>\n\n  <!-- <input type="text" name="fname" [(ngModel)]="description"> -->\n\n  \n\n    <ion-textarea  class="description-form" [(ngModel)]="description" placeholder="Descrição..."></ion-textarea>\n\n  \n\n\n\n  <ion-label class="label-form">Atividades: </ion-label>\n\n  <div class="select-task">\n\n    <ion-item class="task-form">\n\n      <!-- <ion-label class="labelForm" >Atividades</ion-label> -->\n\n      <ion-select placeholder="Selecione as atividades" [(ngModel)]="tasksSelected" multiple="true" >\n\n          <ion-option *ngFor=" let task of tasks" [value]="task" >{{task.title}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n\n\n  </div>\n\n\n\n  <button class="buttonSave" (click)="actionButton(title,description)" ion-button> {{ buttonName }}</button>\n\n</ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\register-project\register-project.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_toast_present_toast_present__["a" /* ToastPresentProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_service_service__["a" /* ServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__providers_toast_present_toast_present__["a" /* ToastPresentProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_toast_present_toast_present__["a" /* ToastPresentProvider */]) === "function" && _e || Object])
     ], RegisterProjectPage);
     return RegisterProjectPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=register-project.js.map
@@ -1079,9 +1079,10 @@ var ServiceProvider = /** @class */ (function () {
     };
     ServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], ServiceProvider);
     return ServiceProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=service.js.map
