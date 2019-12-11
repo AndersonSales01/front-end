@@ -36,18 +36,20 @@ export class LoginPage {
   openResetPassword() {
     this.navCtrl.push(ForgotPasswordPage);
   }
- async openLogin(email, password) {
+ openLogin(email, password) {
     const objUser = {
       email,
       password
     };
     if (this.validForm()) {
-     await this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
-
+     this.http.post(`${this.url}/auth/authenticate`, objUser).subscribe(res => {
+      this.loadingcontroller.present();
         try {
           this.setName();
           this.navCtrl.setRoot(ListProjectsPage);
-    
+          this.loadingcontroller.stopLoader();
+          
+          
           localStorage.setItem('name', res.user.name);
           localStorage.setItem('email', res.user.email);
           localStorage.setItem('token', res.token);

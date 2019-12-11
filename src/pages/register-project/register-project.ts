@@ -29,7 +29,7 @@ export class RegisterProjectPage {
   idProjectSelect: String;
   tasksSelected: Array<any>;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-     public http: HttpClient, public serviceProvider: ServiceProvider, private toastprovider: ToastPresentProvider) {
+    public http: HttpClient, public serviceProvider: ServiceProvider, private toastprovider: ToastPresentProvider) {
   }
 
   ionViewDidLoad() {
@@ -114,13 +114,13 @@ export class RegisterProjectPage {
         this.toastprovider.presentToast('Novo projeto salvo com sucesso!');
         this.navCtrl.setRoot(ListProjectsPage);
       }, err => {
-          this.toastprovider.presentToast(err.error.error);
+        this.toastprovider.presentToast(err.error.error);
 
       });
     }
-   
 
-    
+
+
   }
 
   editProject(title, description) {
@@ -141,12 +141,14 @@ export class RegisterProjectPage {
       description,
       tasks: this.tasksSelected
     }
-    console.log("project", project);
     this.serviceProvider.editProject(project).subscribe(res => {
-      console.log("response", res);
-      console.log("body", res.body);
-      // console.log("status", res.headers.status);
+     try {
+        this.toastprovider.presentToast('Projeto editado com sucesso!');
+      } catch (err) {
+      }
+    
     }, err => {
+      this.toastprovider.presentToast(err.error.error);
 
     });
   }
@@ -156,11 +158,11 @@ export class RegisterProjectPage {
       this.toastprovider.presentToast('Campo Titulo obrigatório.');
       return false;
     }
-    if (this.description == null || this.description == ""  || this.description == undefined) {
+    if (this.description == null || this.description == "" || this.description == undefined) {
       this.toastprovider.presentToast('Campo Descrição obrigatório.');
       return false
     }
-    if (this.tasksSelected.length == 0  || this.tasksSelected == undefined) {
+    if (this.tasksSelected.length == 0 || this.tasksSelected == undefined) {
       this.toastprovider.presentToast('Campo Ativiades obrigatório.');
       return false
     }

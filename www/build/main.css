@@ -25980,6 +25980,58 @@ page-list-projects .scroll-content {
   padding: 4px !important;
 }
 
+page-list-projects ion-list {
+  padding: 2px !important;
+}
+
+page-list-projects .list-ios ion-item-sliding {
+  background-color: transparent !important;
+  margin-left: -14px;
+  width: 110%;
+}
+
+page-list-projects .item-ios {
+  background-color: transparent !important;
+}
+
+page-list-projects .list-ios ion-item-options .button {
+  background-color: red;
+  border-radius: 14px;
+  margin-right: 28px;
+  width: 20%;
+}
+
+page-list-projects ion-item-sliding.active-slide.active-options-left ion-item-options[side=left],
+page-list-projects ion-item-sliding.active-slide.active-options-right ion-item-options:not([side=left]) {
+  width: 100%;
+  visibility: visible;
+  height: 80%;
+  margin-right: 30px;
+  margin-top: 22px;
+}
+
+page-list-projects ion-searchbar {
+  background-color: transparent !important;
+  width: 94% !important;
+  margin-left: 11px !important;
+}
+
+page-list-projects .searchbar-ios .searchbar-input {
+  padding: 0 28px;
+  border-radius: 5px;
+  height: 4rem !important;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+page-list-projects .searchbar-ios.searchbar-left-aligned .searchbar-search-icon {
+  margin-left: 0;
+  margin-top: 13px;
+}
+
 page-login label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -26082,8 +26134,8 @@ page-login ::-webkit-input-placeholder {
 }
 
 page-login img {
-  max-width: 50%;
-  margin-left: 72px;
+  max-width: 42%;
+  margin-left: 88px;
   margin-top: 14px;
 }
 

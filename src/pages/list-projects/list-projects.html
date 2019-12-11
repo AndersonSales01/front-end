@@ -8,14 +8,17 @@
 </ion-header>
 
 <ion-content class="content-page" padding>
-      <ion-list>
-        <ion-card (click)="editProject(item)" class="card-proj" *ngFor="let item of listProject">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items">
+      <ion-item>
+        <ion-card class="card-proj" (click)="editProject(item)">
           <ion-card-header>
             <ion-row>
-              <ion-col col-3>
+              <ion-col col-2>
                 <img class="img-card" src="assets/imgs/clipboard.png" />
               </ion-col>
-              <ion-col col-9>
+              <ion-col col-10>
                 <ion-card-title class="text-card">{{ item.title }}</ion-card-title>
               </ion-col>
             </ion-row>
@@ -24,5 +27,12 @@
             <p class="description-card">{{ item.description }}</p>
           </ion-card-content>
         </ion-card>
-      </ion-list>
-  </ion-content>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button (click)="removeProject(item)">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </ion-list>
+</ion-content>

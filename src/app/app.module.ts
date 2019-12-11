@@ -33,7 +33,6 @@ import { ToastPresentProvider } from '../providers/toast-present/toast-present';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +51,7 @@ import { ToastPresentProvider } from '../providers/toast-present/toast-present';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ServiceProvider,
     LoadingControllerProvider,
-    ToastPresentProvider
+    ToastPresentProvider,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
