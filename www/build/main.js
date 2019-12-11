@@ -197,15 +197,15 @@ var map = {
 		3
 	],
 	"../pages/login/login.module": [
-		288,
+		286,
 		2
 	],
 	"../pages/new-user/new-user.module": [
-		286,
+		287,
 		1
 	],
 	"../pages/register-project/register-project.module": [
-		287,
+		288,
 		0
 	]
 };
@@ -305,9 +305,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/forgot-password/forgot-password.module#ForgotPasswordPageModule', name: 'ForgotPasswordPage', segment: 'forgot-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-projects/list-projects.module#ListProjectsPageModule', name: 'ListProjectsPage', segment: 'list-projects', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-user/new-user.module#NewUserPageModule', name: 'NewUserPage', segment: 'new-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/register-project/register-project.module#RegisterProjectPageModule', name: 'RegisterProjectPage', segment: 'register-project', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
@@ -329,7 +329,7 @@ var AppModule = /** @class */ (function () {
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_13__providers_service_service__["a" /* ServiceProvider */],
                 __WEBPACK_IMPORTED_MODULE_15__providers_loading_controller_loading_controller__["a" /* LoadingControllerProvider */],
-                __WEBPACK_IMPORTED_MODULE_16__providers_toast_present_toast_present__["a" /* ToastPresentProvider */]
+                __WEBPACK_IMPORTED_MODULE_16__providers_toast_present_toast_present__["a" /* ToastPresentProvider */],
             ],
             schemas: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]
@@ -357,7 +357,7 @@ var apiConfig = {
 var header = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]({
     'Content-Type': 'application/json',
     'responseType': 'json',
-    'x-access-token': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZTAwZjljZjdjMTQzMmZmNGVjMjQ3MyIsImlhdCI6MTU3NTA1MTgwOSwiZXhwIjoxNTc1MTM4MjA5fQ.aVLw8ZANUsy-dbJiYwW0RMN9eadibWUzZ5T9RFwKXho",
+    'x-access-token': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZTAwZjljZjdjMTQzMmZmNGVjMjQ3MyIsImlhdCI6MTU3NjA4MzgyMywiZXhwIjoxNTc2MTcwMjIzfQ.z9aRHE1rDm_AMvzb4xJLuNyoIGiPtwMeqcEJMNT81sE",
 });
 //# sourceMappingURL=environment.js.map
 
@@ -438,7 +438,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projetos\front-end\src\app\app.html"*/'<ion-menu id="myMenu" [content]="content" type="overlay">\n\n\n\n  <ion-content class="menu">\n\n    <ion-list no-lines>\n\n      <ion-avatar item-start>\n\n        <img class="avatar" src="assets/imgs/avatar.jpg">\n\n      </ion-avatar>\n\n      <label>{{ setName() }}</label>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon name="list-box"></ion-icon>\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n    <ion-icon name="log-out" class="exit-icon" menuClose (click)="logoutPage()"></ion-icon>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content></ion-nav>'/*ion-inline-end:"C:\projetos\front-end\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\projetos\front-end\src\app\app.html"*/'<ion-menu id="myMenu" [content]="content" type="reveal">\n\n\n\n  <ion-content class="menu">\n\n    <ion-list no-lines>\n\n      <ion-avatar item-start>\n\n        <img class="avatar" src="assets/imgs/login.png">\n\n      </ion-avatar>\n\n      <label>{{ setName() }}</label>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon name="list-box"></ion-icon>\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n    <ion-icon name="log-out" class="exit-icon" menuClose (click)="logoutPage()"></ion-icon>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content></ion-nav>'/*ion-inline-end:"C:\projetos\front-end\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -620,8 +620,11 @@ var ListProjectsPage = /** @class */ (function () {
         this.serviceProvider = serviceProvider;
         this.menuCtrl = menuCtrl;
         this.toastprovider = toastprovider;
+        this.token = localStorage.getItem('token');
         this.menuCtrl.enable(true, 'myMenu');
+        this.initializeItems();
     }
+    ListProjectsPage_1 = ListProjectsPage;
     ListProjectsPage.prototype.ionViewDidEnter = function () {
         this.listProject = [];
         this.loadListProjects();
@@ -649,14 +652,40 @@ var ListProjectsPage = /** @class */ (function () {
             refresher.complete();
         }, 2000);
     };
-    ListProjectsPage = __decorate([
+    ListProjectsPage.prototype.removeProject = function (item) {
+        var _this = this;
+        this.serviceProvider.removeProject(item._id).subscribe(function (res) {
+            _this.toastprovider.presentToast('Projeto removido com sucesso!');
+            _this.loadListProjects();
+            _this.navCtrl.setRoot(ListProjectsPage_1);
+        }, function (err) {
+            _this.toastprovider.presentToast(err.error.error);
+        });
+    };
+    ListProjectsPage.prototype.initializeItems = function () {
+        this.items = this.listProject;
+    };
+    ListProjectsPage.prototype.getItems = function (ev) {
+        // Reset items back to all of the items
+        this.initializeItems();
+        // set val to the value of the searchbar
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.isItemAvailable = true;
+            this.items = this.items.filter(function (item) {
+                return (item.title.toString().toLowerCase().indexOf(val.toString().toLowerCase()) > -1);
+            });
+        }
+    };
+    ListProjectsPage = ListProjectsPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-list-projects',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button class="iconMenu" ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Lista de Projetos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="content-page" padding>\n\n      <ion-list>\n\n        <ion-card (click)="editProject(item)" class="card-proj" *ngFor="let item of listProject">\n\n          <ion-card-header>\n\n            <ion-row>\n\n              <ion-col col-3>\n\n                <img class="img-card" src="assets/imgs/clipboard.png" />\n\n              </ion-col>\n\n              <ion-col col-9>\n\n                <ion-card-title class="text-card">{{ item.title }}</ion-card-title>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n            <p class="description-card">{{ item.description }}</p>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-list>\n\n  </ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/,
+            selector: 'page-list-projects',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button class="iconMenu" ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Lista de Projetos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="content-page" padding>\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n  <ion-list>\n\n    <ion-item-sliding *ngFor="let item of items">\n\n      <ion-item>\n\n        <ion-card class="card-proj" (click)="editProject(item)">\n\n          <ion-card-header>\n\n            <ion-row>\n\n              <ion-col col-2>\n\n                <img class="img-card" src="assets/imgs/clipboard.png" />\n\n              </ion-col>\n\n              <ion-col col-10>\n\n                <ion-card-title class="text-card">{{ item.title }}</ion-card-title>\n\n              </ion-col>\n\n            </ion-row>\n\n          </ion-card-header>\n\n          <ion-card-content>\n\n            <p class="description-card">{{ item.description }}</p>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-item>\n\n      <ion-item-options>\n\n        <button ion-button (click)="removeProject(item)">Delete</button>\n\n      </ion-item-options>\n\n    </ion-item-sliding>\n\n\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\list-projects\list-projects.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_service_service__["a" /* ServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_service_service__["a" /* ServiceProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_toast_present_toast_present__["a" /* ToastPresentProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_toast_present_toast_present__["a" /* ToastPresentProvider */]) === "function" && _e || Object])
     ], ListProjectsPage);
     return ListProjectsPage;
-    var _a, _b, _c, _d, _e;
+    var ListProjectsPage_1, _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=list-projects.js.map
@@ -684,41 +713,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
 };
 
 
@@ -749,38 +743,29 @@ var LoginPage = /** @class */ (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__forgot_password_forgot_password__["a" /* ForgotPasswordPage */]);
     };
     LoginPage.prototype.openLogin = function (email, password) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var objUser;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        objUser = {
-                            email: email,
-                            password: password
-                        };
-                        if (!this.validForm()) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.http.post(this.url + "/auth/authenticate", objUser).subscribe(function (res) {
-                                try {
-                                    _this.setName();
-                                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__list_projects_list_projects__["a" /* ListProjectsPage */]);
-                                    localStorage.setItem('name', res.user.name);
-                                    localStorage.setItem('email', res.user.email);
-                                    localStorage.setItem('token', res.token);
-                                }
-                                catch (err) {
-                                }
-                                console.log(res);
-                            }, function (err) {
-                                _this.toastprovider.presentToast(err.error.error);
-                            })];
-                    case 1:
-                        _a.sent();
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+        var _this = this;
+        var objUser = {
+            email: email,
+            password: password
+        };
+        if (this.validForm()) {
+            this.http.post(this.url + "/auth/authenticate", objUser).subscribe(function (res) {
+                _this.loadingcontroller.present();
+                try {
+                    _this.setName();
+                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__list_projects_list_projects__["a" /* ListProjectsPage */]);
+                    _this.loadingcontroller.stopLoader();
+                    localStorage.setItem('name', res.user.name);
+                    localStorage.setItem('email', res.user.email);
+                    localStorage.setItem('token', res.token);
                 }
+                catch (err) {
+                }
+                console.log(res);
+            }, function (err) {
+                _this.toastprovider.presentToast(err.error.error);
             });
-        });
+        }
     };
     LoginPage.prototype.openPage = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__list_projects_list_projects__["a" /* ListProjectsPage */]);
@@ -801,7 +786,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\login\login.html"*/'<ion-content padding>\n\n <img src="assets/imgs/logo-oi.png">\n\n\n\n \n\n <div>\n\n    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email" required>\n\n  </div>\n\n  <div>\n\n    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha" required>\n\n    <label class="reset-password" (click)="openResetPassword()">Esqueceu a senha?</label>\n\n  </div>\n\n  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR\n\n    \n\n  </button>\n\n  <p>\n\n    <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\projetos\front-end\src\pages\login\login.html"*/'<ion-content padding>\n\n <img src="assets/imgs/login.png">\n\n\n\n \n\n <div>\n\n    <input type="text" name="fname" [(ngModel)]="email" placeholder="Email" required>\n\n  </div>\n\n  <div>\n\n    <input type="password" name="fname" [(ngModel)]="password" placeholder="Senha" required>\n\n    <label class="reset-password" (click)="openResetPassword()">Esqueceu a senha?</label>\n\n  </div>\n\n  <button ion-button class="login-button" (click)="openLogin(email, password)">LOGAR\n\n    \n\n  </button>\n\n  <p>\n\n    <button ion-button class="new-user-button" (click)="newUser()">CRIAR CONTA</button>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\projetos\front-end\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__providers_toast_present_toast_present__["a" /* ToastPresentProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_toast_present_toast_present__["a" /* ToastPresentProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__providers_loading_controller_loading_controller__["a" /* LoadingControllerProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__providers_loading_controller_loading_controller__["a" /* LoadingControllerProvider */]) === "function" && _f || Object])
     ], LoginPage);
@@ -977,6 +962,7 @@ var RegisterProjectPage = /** @class */ (function () {
         });
     };
     RegisterProjectPage.prototype.editProject = function (title, description) {
+        var _this = this;
         console.log("entrou no editar");
         var task = {
             title: "tarefa front end",
@@ -989,12 +975,14 @@ var RegisterProjectPage = /** @class */ (function () {
             description: description,
             tasks: this.tasksSelected
         };
-        console.log("project", project);
         this.serviceProvider.editProject(project).subscribe(function (res) {
-            console.log("response", res);
-            console.log("body", res.body);
-            // console.log("status", res.headers.status);
+            try {
+                _this.toastprovider.presentToast('Projeto editado com sucesso!');
+            }
+            catch (err) {
+            }
         }, function (err) {
+            _this.toastprovider.presentToast(err.error.error);
         });
     };
     RegisterProjectPage.prototype.validForm = function () {
@@ -1076,6 +1064,11 @@ var ServiceProvider = /** @class */ (function () {
         //Retira o atributo id do objeto.
         var id = project.id, projectData = __rest(project, ["id"]);
         return this.http.put(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* apiConfig */].BASE_URL + "/projects/" + id, projectData, { headers: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["b" /* header */], observe: 'response' });
+    };
+    ServiceProvider.prototype.removeProject = function (id) {
+        //Retira o atributo id do objeto.
+        // let { id, ...projectData } = project;
+        return this.http.delete(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* apiConfig */].BASE_URL + "/projects/" + id, { headers: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["b" /* header */], observe: 'response' });
     };
     ServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),

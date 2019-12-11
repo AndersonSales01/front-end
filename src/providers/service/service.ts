@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { apiConfig, header } from '../../environments/environment';
 import { Observable } from 'rxjs/Observable';
@@ -29,6 +29,11 @@ export class ServiceProvider {
     //Retira o atributo id do objeto.
     let { id, ...projectData } = project;
     return this.http.put(`${apiConfig.BASE_URL}/projects/${id}`, projectData, { headers: header, observe: 'response' });
+  }
+  removeProject(id) {
+    //Retira o atributo id do objeto.
+   // let { id, ...projectData } = project;
+    return this.http.delete(`${apiConfig.BASE_URL}/projects/${id}`, { headers: header, observe: 'response' });
   }
 
 }

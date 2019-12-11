@@ -3,13 +3,16 @@ page-list-projects {
     .content-page {
         background-image: linear-gradient(to right top, #18c6e1, #7179ee, #f208fd);
     }
+
     .card-proj {
         border-radius: 15px;
         opacity: 0.8;
     }
+
     .toolbar-background {
         background-color: transparent !important;
     }
+
     .toolbar-title {
         font-size: 18px;
         display: flex !important;
@@ -18,7 +21,8 @@ page-list-projects {
         justify-content: center;
         color: #F5F5F5;
         margin-left: 8px;
-        }
+    }
+
     .text-card {
         color: #7179ee;
         justify-content: center;
@@ -45,20 +49,73 @@ page-list-projects {
         justify-content: center;
         display: flex;
     }
+
     .label-form {
         font-size: 14px !important;
         font-family: Verdana !important;
         color: #7179ee;
         position: relative !important;
     }
+
     .img-card {
         width: 36px;
         margin-left: 6px;
     }
-    ion-content.has-refresher > .scroll-content {
+
+    ion-content.has-refresher>.scroll-content {
         background-color: transparent !important;
     }
+
     .scroll-content {
         padding: 4px !important;
+    }
+
+    ion-list {
+        padding: 2px !important;
+    }
+
+    .list-ios ion-item-sliding {
+        background-color: transparent !important;
+        margin-left: -14px;
+        width: 110%;
+    }
+
+    .item-ios {
+        background-color: transparent !important;
+    }
+
+    .list-ios ion-item-options .button {
+        background-color: red;
+        border-radius: 14px;
+        margin-right: 28px;
+        width: 20%;
+    }
+
+    ion-item-sliding.active-slide.active-options-left ion-item-options[side=left],
+    ion-item-sliding.active-slide.active-options-right ion-item-options:not([side=left]) {
+        width: 100%;
+        visibility: visible;
+        height: 80%;
+        margin-right: 30px;
+        margin-top: 22px;
+    }
+    ion-searchbar {
+        background-color: transparent !important;
+        width: 94% !important;
+        margin-left: 11px !important;
+    }
+    .searchbar-ios .searchbar-input {
+        padding: 0 28px;
+        border-radius: 5px;
+        height: 4rem !important;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #000;
+        background-color: #fff;
+        margin-top: 10px;
+    }
+    .searchbar-ios.searchbar-left-aligned .searchbar-search-icon {
+        margin-left: 0;
+        margin-top: 13px;
     }
 }
